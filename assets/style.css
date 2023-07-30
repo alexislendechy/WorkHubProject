@@ -1,0 +1,265 @@
+
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+
+
+
+#searchImgID {
+    border-radius: 50px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 18px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0706069d;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 4px;
+  }
+
+
+/* ///////////////////////////////////////////  */
+/*  Carousel*/
+/* ///////////////////////////////////////////  */
+#resultsID {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+
+.gallery {
+    width: 100%;
+}
+
+.gallery-container{
+    align-items: center;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.gallery-item{
+height: 200px;
+position:absolute;
+transition: all 0.3s ease-in-out ;
+width: 330px;
+z-index: 0;
+border-radius:15px; ;
+}
+
+.gallery-item-1{
+    left: 15%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.gallery-item-2,.gallery-item-4{
+    height: 250px;
+    opacity: 0.8;
+    width: 380px;
+    z-index: 1;
+}
+
+.gallery-item-2 {
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-3 {
+    @apply box-shadow-lg; 
+    height: 300px;
+    opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 430px;
+    z-index: 2;
+}
+
+#job-display-3 {
+    @apply text-center p-4;
+}
+.gallery-item-4{
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-5{
+    left: 85%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.gallery-controls{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    height: 100px;
+}
+
+.gallery-controls button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 50px;
+    padding: 0 12px;
+    text-transform: capitalize;
+
+}
+
+.gallery-controls-button:focus{
+    outline: none;
+}
+
+.gallery-controls-previous{
+    position: relative;
+}
+
+.gallery-controls-previous::before{
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    left: -30px;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    transform: rotate(130deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-previous:hover::before{
+    left: -40px;
+}
+
+.gallery-controls-next{
+    position: relative;
+}
+
+.gallery-controls-next::before{
+    border: solid black;
+    border-width:  0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    padding: 10px;
+    position:absolute;
+    right: -30px;
+    top: 45%;
+    transform: rotate(-45deg) translateY(-50%);
+    transition: right .5s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-next:hover:before{
+    right: -40px;
+}
+
+.gallery-nav {
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.gallery nav li{
+    background: white;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+
+}
+
+.gallery-nav li.gallery-item-selected{
+    background: #555;
+}
+
+.background{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(45deg,red,blue,orange,black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 30s ease-in-out infinite;
+    
+}
+.background-son{
+    font-size: 4rem;
+    letter-spacing: 2px;
+    border: solid 3px #fff;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 2rem 3rem;
+}
+
+
+.placeholder-message {
+
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    height: 100%;
+}
+
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+
+.glass-container {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.2); /* Color de fondo con mayor transparencia */
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 10%, transparent 50%, rgba(255, 255, 255, 0.15) 90%); /* Degradado para simular vidrio */
+    border-radius: 10px;
+    backdrop-filter: blur(15px); /* Aplicando el efecto de vidrio con mayor desenfoque */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el efecto */
+  }
+
+  
+
+  
+  .custom-button {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s;
+  }
+  
+  .custom-button:active {
+    background-color: rgba(255, 140, 0, 0.883);
+    transform: scale(0.95);
+    transition: transform 0.2s;
+  }
+  .box > div {
+    color: black;
+}
+
+  
